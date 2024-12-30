@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sqc-pg-Q73">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -65,39 +64,64 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WQm-lJ-aBD">
-                                <rect key="frame" x="0.0" y="93" width="393" height="676"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="X43-66-4TR">
-                                    <size key="itemSize" width="128" height="128"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells/>
-                                <connections>
-                                    <outlet property="dataSource" destination="e1n-rE-cNN" id="Cbh-Of-H0M"/>
-                                    <outlet property="delegate" destination="e1n-rE-cNN" id="oHd-Fw-cYg"/>
-                                </connections>
-                            </collectionView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2EV-io-jER">
+                                <rect key="frame" x="8" y="59" width="377" height="710"/>
+                                <subviews>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WQm-lJ-aBD">
+                                        <rect key="frame" x="0.0" y="0.0" width="377" height="710"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="X43-66-4TR">
+                                            <size key="itemSize" width="128" height="128"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="e1n-rE-cNN" id="Cbh-Of-H0M"/>
+                                            <outlet property="delegate" destination="e1n-rE-cNN" id="oHd-Fw-cYg"/>
+                                        </connections>
+                                    </collectionView>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9aQ-9w-BR7">
+                                        <rect key="frame" x="0.0" y="0.0" width="377" height="40"/>
+                                        <subviews>
+                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="cD2-RP-FpY">
+                                                <rect key="frame" x="168.66666666666666" y="0.0" width="40" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="YeO-ov-dMo"/>
+                                                    <constraint firstAttribute="height" constant="40" id="g8M-7N-XwN"/>
+                                                </constraints>
+                                                <color key="color" name="012121"/>
+                                            </activityIndicatorView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="cD2-RP-FpY" firstAttribute="centerX" secondItem="9aQ-9w-BR7" secondAttribute="centerX" id="ImJ-Bo-6aB"/>
+                                            <constraint firstAttribute="bottom" secondItem="cD2-RP-FpY" secondAttribute="bottom" id="fSb-u1-Fpg"/>
+                                            <constraint firstItem="cD2-RP-FpY" firstAttribute="top" secondItem="9aQ-9w-BR7" secondAttribute="top" id="muJ-Td-dp9"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="iSB-jD-dlJ"/>
                         <color key="backgroundColor" name="CFE1FA"/>
                         <constraints>
-                            <constraint firstItem="iSB-jD-dlJ" firstAttribute="trailing" secondItem="WQm-lJ-aBD" secondAttribute="trailing" id="5gC-LP-OnU"/>
-                            <constraint firstItem="iSB-jD-dlJ" firstAttribute="bottom" secondItem="WQm-lJ-aBD" secondAttribute="bottom" id="7Kd-BG-Q9S"/>
-                            <constraint firstItem="WQm-lJ-aBD" firstAttribute="top" secondItem="iSB-jD-dlJ" secondAttribute="top" constant="34" id="Tds-f5-1Z0"/>
-                            <constraint firstItem="WQm-lJ-aBD" firstAttribute="leading" secondItem="iSB-jD-dlJ" secondAttribute="leading" id="Vni-jB-JVA"/>
+                            <constraint firstItem="2EV-io-jER" firstAttribute="leading" secondItem="iSB-jD-dlJ" secondAttribute="leading" constant="8" id="0WN-HB-jl6"/>
+                            <constraint firstItem="2EV-io-jER" firstAttribute="bottom" secondItem="iSB-jD-dlJ" secondAttribute="bottom" id="2rY-8J-Ma5"/>
+                            <constraint firstItem="2EV-io-jER" firstAttribute="top" secondItem="iSB-jD-dlJ" secondAttribute="top" id="IjM-XX-gO2"/>
+                            <constraint firstAttribute="trailing" secondItem="2EV-io-jER" secondAttribute="trailing" constant="8" id="dUq-U7-7Ou"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="OLE-LU-sQd"/>
                     <connections>
                         <outlet property="charactersCollectionView" destination="WQm-lJ-aBD" id="jCv-kT-peM"/>
+                        <outlet property="loadingIndicatorView" destination="9aQ-9w-BR7" id="PRd-Ym-QT7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="96d-SF-t4O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2987" y="642"/>
+            <point key="canvasLocation" x="-2987.0229007633588" y="641.54929577464793"/>
         </scene>
         <!--Main Controller-->
         <scene sceneID="ngQ-fN-Jkq">
@@ -199,6 +223,9 @@
         <image name="tab_icon_episodes" width="30" height="30"/>
         <image name="tab_icon_locations" width="30" height="30"/>
         <image name="tab_icon_locations_active" width="30" height="30"/>
+        <namedColor name="012121">
+            <color red="0.0040000001899898052" green="0.1289999932050705" blue="0.1289999932050705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="CFE1FA">
             <color red="0.81199997663497925" green="0.88200002908706665" blue="0.98000001907348633" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

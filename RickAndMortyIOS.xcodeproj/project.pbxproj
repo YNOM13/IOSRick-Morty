@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		A2E07302B2592D1DEA2709B3 /* Pods_RickAndMortyIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DDF7184AC6E0856809108AB /* Pods_RickAndMortyIOS.framework */; };
+		CE19DA7A2D22CC4F00C8044D /* CharacterInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19DA792D22CC4700C8044D /* CharacterInfoController.swift */; };
+		CE19DA7C2D22CDBD00C8044D /* Characters.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE19DA7B2D22CDBD00C8044D /* Characters.storyboard */; };
 		CE30EE402D0B21ED0094D424 /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE30EE3F2D0B21EB0094D424 /* CharacterCell.swift */; };
 		CE30EE422D0B220F0094D424 /* CharacterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE30EE412D0B220F0094D424 /* CharacterCell.xib */; };
 		CE30EE452D0B24580094D424 /* ListsMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE30EE442D0B24500094D424 /* ListsMap.swift */; };
@@ -28,14 +30,14 @@
 		CE4A68792CFBB56E0065A773 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE4A68782CFBB56E0065A773 /* Colors.xcassets */; };
 		CE4A687D2CFBBCC10065A773 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4A687C2CFBBCBD0065A773 /* BaseController.swift */; };
 		CE4A68802CFBC0F00065A773 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4A687F2CFBC0EC0065A773 /* UIView.swift */; };
-		CE8C36412D1ECC290058F383 /* FooterLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8C36402D1ECC240058F383 /* FooterLoading.swift */; };
-		CE8C36432D1ECC4E0058F383 /* FooterLoading.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE8C36422D1ECC4E0058F383 /* FooterLoading.xib */; };
 		CE97DDD12CFF939A004FA2B2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE97DDD02CFF9394004FA2B2 /* SceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2EE33236355D61184A59E47E /* Pods-RickAndMortyIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RickAndMortyIOS.release.xcconfig"; path = "Target Support Files/Pods-RickAndMortyIOS/Pods-RickAndMortyIOS.release.xcconfig"; sourceTree = "<group>"; };
 		6DDF7184AC6E0856809108AB /* Pods_RickAndMortyIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RickAndMortyIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE19DA792D22CC4700C8044D /* CharacterInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterInfoController.swift; sourceTree = "<group>"; };
+		CE19DA7B2D22CDBD00C8044D /* Characters.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Characters.storyboard; sourceTree = "<group>"; };
 		CE30EE3F2D0B21EB0094D424 /* CharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCell.swift; sourceTree = "<group>"; };
 		CE30EE412D0B220F0094D424 /* CharacterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterCell.xib; sourceTree = "<group>"; };
 		CE30EE442D0B24500094D424 /* ListsMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsMap.swift; sourceTree = "<group>"; };
@@ -58,8 +60,6 @@
 		CE4A68782CFBB56E0065A773 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		CE4A687C2CFBBCBD0065A773 /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
 		CE4A687F2CFBC0EC0065A773 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
-		CE8C36402D1ECC240058F383 /* FooterLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterLoading.swift; sourceTree = "<group>"; };
-		CE8C36422D1ECC4E0058F383 /* FooterLoading.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FooterLoading.xib; sourceTree = "<group>"; };
 		CE97DDD02CFF9394004FA2B2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D2397E2C709F48E6269273AD /* Pods-RickAndMortyIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RickAndMortyIOS.debug.xcconfig"; path = "Target Support Files/Pods-RickAndMortyIOS/Pods-RickAndMortyIOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,6 +91,14 @@
 				6DDF7184AC6E0856809108AB /* Pods_RickAndMortyIOS.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE19DA782D22CC3C00C8044D /* characterInfo */ = {
+			isa = PBXGroup;
+			children = (
+				CE19DA792D22CC4700C8044D /* CharacterInfoController.swift */,
+			);
+			path = characterInfo;
 			sourceTree = "<group>";
 		};
 		CE30EE3D2D0B21D00094D424 /* cells */ = {
@@ -137,7 +145,9 @@
 		CE35FE7A2D0083E400880131 /* characters */ = {
 			isa = PBXGroup;
 			children = (
+				CE19DA782D22CC3C00C8044D /* characterInfo */,
 				CE35FE7D2D00860700880131 /* CharactersController.swift */,
+				CE19DA7B2D22CDBD00C8044D /* Characters.storyboard */,
 			);
 			path = characters;
 			sourceTree = "<group>";
@@ -288,8 +298,6 @@
 		CE8C363F2D1ECC1D0058F383 /* views */ = {
 			isa = PBXGroup;
 			children = (
-				CE8C36402D1ECC240058F383 /* FooterLoading.swift */,
-				CE8C36422D1ECC4E0058F383 /* FooterLoading.xib */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -358,10 +366,10 @@
 				CE4A68772CFBB4980065A773 /* ErrorView.storyboard in Resources */,
 				CE4A685D2CFB43BB0065A773 /* Assets.xcassets in Resources */,
 				CE4A685F2CFB43BB0065A773 /* LaunchScreen.storyboard in Resources */,
+				CE19DA7C2D22CDBD00C8044D /* Characters.storyboard in Resources */,
 				CE4A68792CFBB56E0065A773 /* Colors.xcassets in Resources */,
 				CE4A68602CFB43BB0065A773 /* Main.storyboard in Resources */,
 				CE4A686C2CFB890C0065A773 /* Splash.storyboard in Resources */,
-				CE8C36432D1ECC4E0058F383 /* FooterLoading.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,8 +428,8 @@
 				CE30EE402D0B21ED0094D424 /* CharacterCell.swift in Sources */,
 				CE30EE452D0B24580094D424 /* ListsMap.swift in Sources */,
 				CE4A68752CFBB3E40065A773 /* ErrorViewController.swift in Sources */,
-				CE8C36412D1ECC290058F383 /* FooterLoading.swift in Sources */,
 				CE4A687D2CFBBCC10065A773 /* BaseController.swift in Sources */,
+				CE19DA7A2D22CC4F00C8044D /* CharacterInfoController.swift in Sources */,
 				CE4A68612CFB43BB0065A773 /* AppDelegate.swift in Sources */,
 				CE30EE482D0B36CC0094D424 /* Presenter.swift in Sources */,
 				CE4A68632CFB43BB0065A773 /* MainController.swift in Sources */,
@@ -465,11 +473,12 @@
 				DEVELOPMENT_TEAM = V9HJ4JCC4T;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RickAndMortyIOS/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Rick&Morty";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 16;
+				IPHONEOS_DEPLOYMENT_TARGET = 17;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -498,11 +507,12 @@
 				DEVELOPMENT_TEAM = V9HJ4JCC4T;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RickAndMortyIOS/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Rick&Morty";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 16;
+				IPHONEOS_DEPLOYMENT_TARGET = 17;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

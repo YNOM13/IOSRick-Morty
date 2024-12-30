@@ -6,31 +6,44 @@
 //
 
 import UIKit
+import ShiftTransitions
 
 class CharactersController: BaseController, CharacterApiView{
     @IBOutlet weak var charactersCollectionView: UICollectionView!
+    @IBOutlet weak var loadingIndicatorView: UIView!
     
+    private var characters: [CharacterResult] = []
+    private var page: Int = 1
+    private var item: CharacterInfo? = nil
+    private var isLoading: Bool = false
     private var presenter: CharacterApiPresenterProtocol?
-    private var characters: Array<CharacterResult> = Array()
-    private var isLoading = false
-    private let footerView = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.white)
-
+    let bottomRefreshController = UIRefreshControl()
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        charactersCollectionView.register(UINib(nibName: "CharacterCell", bundle: nil), forCellWithReuseIdentifier: "characterCell")
         
-
+        charactersCollectionView.register(UINib(nibName: "CharacterCell", bundle: nil), forCellWithReuseIdentifier: "characterCell")
         presenter = CharacterPresenter(view: self)
-        presenter?.reloadPage()
+        loadCharacters(page: page)
     }
     
+    func loadCharacters(page: Int) {
+        guard !isLoading else { return }
+        isLoading = true
+        presenter?.loadCharacters(page: page)
+    }
+    
+    @objc func refreshBottom() {
+        presenter?.loadCharacters(page: page)
+    }
     
     func displayUsers(_ users: [CharacterResult], _ item: CharacterInfo) {
         self.characters = users
+        self.item = item
+        isLoading = false
         charactersCollectionView.reloadData()
     }
-    
-
 }
 
 extension CharactersController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -44,32 +57,28 @@ extension CharactersController: UICollectionViewDataSource, UICollectionViewDele
         return cell
     }
     
-    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        presenter?.loadNextPage()
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let selectedUser = characters[indexPath.row]
+        let userInfoVC = UIStoryboard(name: "Characters", bundle: nil).instantiateViewController(withIdentifier: "characterInfo") as! CharacterInfoController
+        userInfoVC.characterInfo = selectedUser
+        userInfoVC.shift.viewOrder = .fromViewsOnTop
+        userInfoVC.shift.enable()
+
+        present(userInfoVC, animated: true)
     }
     
-//        func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//            let selectedUser = characters[indexPath.row]
-//            let userInfoVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "userInfo") as! UserInfoController
-//            userInfoVC.userInfo = selectedUser
-//            userInfoVC.modalPresentationStyle = .fullScreen
-//            present(userInfoVC, animated: true)
-//        }
-    
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        if kind == UICollectionView.elementKindSectionFooter {
-            let footer = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "Footer", for: indexPath)
-            footer.addSubview(footerView)
-            footerView.frame = CGRect(x: 0, y: 0, width: collectionView.bounds.width, height: 50)
-            return footer
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        if page <= item?.pages ?? 0 {
+            page += 1
+            loadCharacters(page: page)
         }
-        return UICollectionReusableView()
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplaySupplementaryView view: UICollectionReusableView, forElementKind elementKind: String, at indexPath: IndexPath){
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: 68)
+        return CGSize(width: (collectionView.frame.width - 16) / 2, height: collectionView.frame.width / 2)
     }
 }
+

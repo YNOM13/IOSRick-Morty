@@ -9,8 +9,7 @@ import Alamofire
 import ObjectMapper
 
 protocol CharacterApiPresenterProtocol: AnyObject {
-    func reloadPage()
-    func loadNextPage()
+    func loadCharacters(page: Int)
 }
 
 protocol CharacterApiView: AnyObject {
@@ -21,58 +20,29 @@ protocol CharacterApiView: AnyObject {
 class CharacterPresenter: CharacterApiPresenterProtocol {
     weak var view: CharacterApiView?
     private var users: [CharacterResult] = []
-    private var info: CharacterInfo? = nil
-    private var page: Int = 1
-    
+
     init(view: CharacterApiView) {
         self.view = view
     }
-    
-    func reloadPage() {
-        page = 1
-        users = []
-        fetchUsers()
-    }
-    
-    func loadNextPage() {
-        page += 1
-        fetchUsers()
-    }
-    
-    func fetchUsers() {
-        let url = "https://rickandmortyapi.com/api/character/?page=\(page)"
 
-        AF.request(url)
-            .validate()
-            .responseData { [weak self] response in
-                guard let self = self else { return }
-                switch response.result {
-                case .success(let data):
-                    if let character = try? Mapper<Character>().map(JSONString: String(data: data, encoding: .utf8)!) {
-                        
-                        self.info = character.characterInfo ?? CharacterInfo(map: Map(mappingType: .fromJSON, JSON: [:]))!
-                        self.users.append(contentsOf: character.characterResult ?? [])
-                        if let info = self.info{
-                            self.view?.displayUsers(self.users, info)
-                        }
-                    } else {
-                        self.view?.showError("Failed to parse user data.")
+    func loadCharacters(page: Int) {
+        let url = "https://rickandmortyapi.com/api/character/?page=\(page)"
+        
+        AF.request(url).validate().responseData { [weak self] response in
+            guard let self = self else { return }
+            
+            switch response.result {
+            case .success(let data):
+                if let character = try? Mapper<Character>().map(JSONString: String(data: data, encoding: .utf8)!) {
+                    self.users.append(contentsOf: character.characterResult ?? [])
+                    
+                    if let info = character.characterInfo {
+                        self.view?.displayUsers(self.users, info)
                     }
-                case .failure(let error):
-                    self.view?.showError("Request failed: \(error.localizedDescription)")
                 }
+            case .failure:
+                break
             }
+        }
     }
 }
-
-//if let info = character.characterInfo {
-//    print("Info: \(info)")
-//    print("Total characters: \(info.count ?? 0)")
-//}
-//
-//if let results = character.characterResult {
-//    print("Results: \(results)")
-//    for result in results {
-//        print("Character Name: \(result.name ?? "Unknown")")
-//    }
-//}
