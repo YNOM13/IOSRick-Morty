@@ -11,6 +11,7 @@ import ShiftTransitions
 class CharactersController: BaseController, CharacterApiView{
     @IBOutlet weak var charactersCollectionView: UICollectionView!
     @IBOutlet weak var loadingIndicatorView: UIView!
+    @IBOutlet weak var headerView: UIView!
     
     private var characters: [CharacterResult] = []
     private var page: Int = 1
@@ -19,13 +20,14 @@ class CharactersController: BaseController, CharacterApiView{
     private var presenter: CharacterApiPresenterProtocol?
     let bottomRefreshController = UIRefreshControl()
    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         charactersCollectionView.register(UINib(nibName: "CharacterCell", bundle: nil), forCellWithReuseIdentifier: "characterCell")
         presenter = CharacterPresenter(view: self)
         loadCharacters(page: page)
+        
+        headerView.transitionId = "ok"
     }
     
     func loadCharacters(page: Int) {
@@ -61,10 +63,9 @@ extension CharactersController: UICollectionViewDataSource, UICollectionViewDele
         let selectedUser = characters[indexPath.row]
         let userInfoVC = UIStoryboard(name: "Characters", bundle: nil).instantiateViewController(withIdentifier: "characterInfo") as! CharacterInfoController
         userInfoVC.characterInfo = selectedUser
-        userInfoVC.shift.viewOrder = .fromViewsOnTop
         userInfoVC.shift.enable()
-
-        present(userInfoVC, animated: true)
+        
+        present(userInfoVC, animated: true, completion: nil)
     }
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {

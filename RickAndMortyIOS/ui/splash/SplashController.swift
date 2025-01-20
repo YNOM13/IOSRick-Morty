@@ -6,11 +6,17 @@
 //
 
 import UIKit
+import Lottie
 
 class SplashController: UIViewController{
+    @IBOutlet weak var animationView: LottieAnimationView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        animationView?.animation = LottieAnimation.named("rick_drinking")
+        animationView?.loopMode = .loop
+        animationView?.play()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
             self.openMainController()

@@ -7,10 +7,12 @@
 
 import UIKit
 import Kingfisher
+import ShiftTransitions
 
 class CharacterInfoController: BaseController{
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var characterImage: UIImageView!
+    @IBOutlet weak var backButton: UIButton!
     
     var characterInfo: CharacterResult? = nil
     
@@ -19,6 +21,9 @@ class CharacterInfoController: BaseController{
         
         nameLabel.text = characterInfo?.name ?? "error 404"
         characterImage.kf.setImage(with: URL(string: characterInfo?.imageURL ?? ""))
+        characterImage.transitionId = String(characterInfo?.id ?? 0)
+        nameLabel.transitionId = String(characterInfo?.id ?? 0) + "name"
+        
+        backButton.transitionId = "hello"
     }
-    
 }

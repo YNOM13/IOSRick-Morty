@@ -65,10 +65,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2EV-io-jER">
-                                <rect key="frame" x="8" y="59" width="377" height="710"/>
+                                <rect key="frame" x="8" y="102" width="377" height="667"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WQm-lJ-aBD">
-                                        <rect key="frame" x="0.0" y="0.0" width="377" height="710"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="377" height="667"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="X43-66-4TR">
                                             <size key="itemSize" width="128" height="128"/>
@@ -103,19 +103,42 @@
                                     </view>
                                 </subviews>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="08C-1I-jQV">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="102"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GOV-Xu-h1S">
+                                        <rect key="frame" x="300" y="50" width="75" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="P4c-In-9sV"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" name="F1F4FC"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="GOV-Xu-h1S" secondAttribute="bottom" constant="12" id="SdQ-iN-rs9"/>
+                                    <constraint firstItem="GOV-Xu-h1S" firstAttribute="top" secondItem="08C-1I-jQV" secondAttribute="top" constant="50" id="kGr-ZB-gYG"/>
+                                    <constraint firstAttribute="trailing" secondItem="GOV-Xu-h1S" secondAttribute="trailing" constant="18" id="kSn-II-uSJ"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="iSB-jD-dlJ"/>
                         <color key="backgroundColor" name="CFE1FA"/>
                         <constraints>
                             <constraint firstItem="2EV-io-jER" firstAttribute="leading" secondItem="iSB-jD-dlJ" secondAttribute="leading" constant="8" id="0WN-HB-jl6"/>
                             <constraint firstItem="2EV-io-jER" firstAttribute="bottom" secondItem="iSB-jD-dlJ" secondAttribute="bottom" id="2rY-8J-Ma5"/>
-                            <constraint firstItem="2EV-io-jER" firstAttribute="top" secondItem="iSB-jD-dlJ" secondAttribute="top" id="IjM-XX-gO2"/>
+                            <constraint firstItem="08C-1I-jQV" firstAttribute="top" secondItem="kAO-yg-nbR" secondAttribute="top" id="F0C-wb-Y9H"/>
                             <constraint firstAttribute="trailing" secondItem="2EV-io-jER" secondAttribute="trailing" constant="8" id="dUq-U7-7Ou"/>
+                            <constraint firstItem="2EV-io-jER" firstAttribute="top" secondItem="08C-1I-jQV" secondAttribute="bottom" id="dmt-1p-6er"/>
+                            <constraint firstItem="08C-1I-jQV" firstAttribute="leading" secondItem="iSB-jD-dlJ" secondAttribute="leading" id="yPO-dh-Urq"/>
+                            <constraint firstItem="iSB-jD-dlJ" firstAttribute="trailing" secondItem="08C-1I-jQV" secondAttribute="trailing" id="zea-dC-fum"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="OLE-LU-sQd"/>
                     <connections>
                         <outlet property="charactersCollectionView" destination="WQm-lJ-aBD" id="jCv-kT-peM"/>
+                        <outlet property="headerView" destination="08C-1I-jQV" id="8dT-Ok-aUe"/>
                         <outlet property="loadingIndicatorView" destination="9aQ-9w-BR7" id="PRd-Ym-QT7"/>
                     </connections>
                 </viewController>
@@ -131,6 +154,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" name="F1F4FC"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="transitionId" value="ok"/>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="p96-Yg-DN1" kind="relationship" relationship="viewControllers" id="SYR-vf-6ui"/>

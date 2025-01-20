@@ -7,6 +7,7 @@
 
 import UIKit
 import Kingfisher
+import ShiftTransitions
 
 class CharacterCell: UICollectionViewCell{
     @IBOutlet weak var nameLabel: UILabel!
@@ -15,5 +16,10 @@ class CharacterCell: UICollectionViewCell{
     func setData(item: CharacterResult){
         nameLabel.text = item.name
         characterImage.kf.setImage(with: URL(string: item.imageURL ?? ""))
+        characterImage.transitionId = String(item.id)
+        nameLabel.transitionId = String(item.id) + "name"
+        
+        characterImage.layer.cornerRadius = 12
+        characterImage.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
     }
 }

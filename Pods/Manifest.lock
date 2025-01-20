@@ -4,6 +4,7 @@ PODS:
     - Alamofire (~> 5.0.0-rc.2)
   - CCBottomRefreshControl (0.5.2)
   - Kingfisher (8.0.3)
+  - lottie-ios (4.5.0)
   - Moya (15.0.0):
     - Moya/Core (= 15.0.0)
   - Moya/Core (15.0.0):
@@ -23,6 +24,7 @@ DEPENDENCIES:
   - AlamofireNetworkActivityLogger
   - CCBottomRefreshControl
   - Kingfisher
+  - lottie-ios
   - Moya
   - ObjectMapper
   - RealmSwift
@@ -36,6 +38,7 @@ SPEC REPOS:
     - AlamofireNetworkActivityLogger
     - CCBottomRefreshControl
     - Kingfisher
+    - lottie-ios
     - Moya
     - ObjectMapper
     - Realm
@@ -49,6 +52,7 @@ SPEC CHECKSUMS:
   AlamofireNetworkActivityLogger: 94e8a7d454a4a9800cef1d0c1d3699754493684b
   CCBottomRefreshControl: 389780b4488321c91d18f66a6da5ef9606df6de5
   Kingfisher: bbf78af014cc845cf9a799363f627b5212784165
+  lottie-ios: a881093fab623c467d3bce374367755c272bdd59
   Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
   ObjectMapper: e6e4d91ff7f2861df7aecc536c92d8363f4c9677
   Realm: a799b5f9145623fb0bfe149fe81422863631dd0f
@@ -57,6 +61,6 @@ SPEC CHECKSUMS:
   SkeletonView: 5a050f6411e697abd4cda0a8d767013399dccd69
   SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
 
-PODFILE CHECKSUM: 94812bd866d81b12c906dbdad61aac2a95d61438
+PODFILE CHECKSUM: 6395b68ebd65829c5e5347e94cfc182b63c895fb
 
 COCOAPODS: 1.15.2

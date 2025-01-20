@@ -16,7 +16,8 @@ target 'RickAndMortyIOS' do
   pod 'CCBottomRefreshControl'
   pod 'AlamofireNetworkActivityLogger'
   pod 'ShiftTransitions'
-  
+  pod 'lottie-ios'
+
 end
 
 post_install do |installer|

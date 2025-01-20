@@ -30,6 +30,7 @@
 		CE4A68792CFBB56E0065A773 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE4A68782CFBB56E0065A773 /* Colors.xcassets */; };
 		CE4A687D2CFBBCC10065A773 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4A687C2CFBBCBD0065A773 /* BaseController.swift */; };
 		CE4A68802CFBC0F00065A773 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4A687F2CFBC0EC0065A773 /* UIView.swift */; };
+		CE8A21A12D2401B80042BF24 /* rick_drinking.json in Resources */ = {isa = PBXBuildFile; fileRef = CE8A21A02D2401B80042BF24 /* rick_drinking.json */; };
 		CE97DDD12CFF939A004FA2B2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE97DDD02CFF9394004FA2B2 /* SceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,7 @@
 		CE4A68782CFBB56E0065A773 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		CE4A687C2CFBBCBD0065A773 /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
 		CE4A687F2CFBC0EC0065A773 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		CE8A21A02D2401B80042BF24 /* rick_drinking.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = rick_drinking.json; sourceTree = "<group>"; };
 		CE97DDD02CFF9394004FA2B2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D2397E2C709F48E6269273AD /* Pods-RickAndMortyIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RickAndMortyIOS.debug.xcconfig"; path = "Target Support Files/Pods-RickAndMortyIOS/Pods-RickAndMortyIOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -233,6 +235,7 @@
 		CE4A68672CFB87910065A773 /* structure */ = {
 			isa = PBXGroup;
 			children = (
+				CE8A219F2D2401A00042BF24 /* animations */,
 				CE30EE462D0B36BF0094D424 /* presenter */,
 				CE30EE432D0B24440094D424 /* mapping */,
 				CE35FE772D00745900880131 /* api */,
@@ -293,6 +296,14 @@
 				CE4A687F2CFBC0EC0065A773 /* UIView.swift */,
 			);
 			path = extensions;
+			sourceTree = "<group>";
+		};
+		CE8A219F2D2401A00042BF24 /* animations */ = {
+			isa = PBXGroup;
+			children = (
+				CE8A21A02D2401B80042BF24 /* rick_drinking.json */,
+			);
+			path = animations;
 			sourceTree = "<group>";
 		};
 		CE8C363F2D1ECC1D0058F383 /* views */ = {
@@ -369,6 +380,7 @@
 				CE19DA7C2D22CDBD00C8044D /* Characters.storyboard in Resources */,
 				CE4A68792CFBB56E0065A773 /* Colors.xcassets in Resources */,
 				CE4A68602CFB43BB0065A773 /* Main.storyboard in Resources */,
+				CE8A21A12D2401B80042BF24 /* rick_drinking.json in Resources */,
 				CE4A686C2CFB890C0065A773 /* Splash.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
