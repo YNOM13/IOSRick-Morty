@@ -14,7 +14,7 @@
 		CE30EE422D0B220F0094D424 /* CharacterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE30EE412D0B220F0094D424 /* CharacterCell.xib */; };
 		CE30EE452D0B24580094D424 /* ListsMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE30EE442D0B24500094D424 /* ListsMap.swift */; };
 		CE30EE482D0B36CC0094D424 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE30EE472D0B36C80094D424 /* Presenter.swift */; };
-		CE35FE792D00746800880131 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE35FE782D00745F00880131 /* Api.swift */; };
+		CE35FE792D00746800880131 /* UserApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE35FE782D00745F00880131 /* UserApiService.swift */; };
 		CE35FE7E2D00860E00880131 /* CharactersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE35FE7D2D00860700880131 /* CharactersController.swift */; };
 		CE4A685D2CFB43BB0065A773 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE4A68542CFB43BB0065A773 /* Assets.xcassets */; };
 		CE4A685F2CFB43BB0065A773 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE4A68572CFB43BB0065A773 /* LaunchScreen.storyboard */; };
@@ -32,6 +32,11 @@
 		CE4A68802CFBC0F00065A773 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4A687F2CFBC0EC0065A773 /* UIView.swift */; };
 		CE8A21A12D2401B80042BF24 /* rick_drinking.json in Resources */ = {isa = PBXBuildFile; fileRef = CE8A21A02D2401B80042BF24 /* rick_drinking.json */; };
 		CE97DDD12CFF939A004FA2B2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE97DDD02CFF9394004FA2B2 /* SceneDelegate.swift */; };
+		CECFC8F62D3E95D300704FC5 /* EpisodeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECFC8F52D3E95D100704FC5 /* EpisodeCell.swift */; };
+		CECFC8F82D3E961300704FC5 /* EpisodeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CECFC8F72D3E961300704FC5 /* EpisodeCell.xib */; };
+		CECFC8FA2D3E9D3000704FC5 /* Episodes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CECFC8F92D3E9D3000704FC5 /* Episodes.storyboard */; };
+		CECFC9052D3FA8C400704FC5 /* EpisodesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECFC9042D3FA8BA00704FC5 /* EpisodesController.swift */; };
+		CECFC9082D3FA93400704FC5 /* EpisodeInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECFC9072D3FA92D00704FC5 /* EpisodeInfoController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,7 +48,7 @@
 		CE30EE412D0B220F0094D424 /* CharacterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterCell.xib; sourceTree = "<group>"; };
 		CE30EE442D0B24500094D424 /* ListsMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsMap.swift; sourceTree = "<group>"; };
 		CE30EE472D0B36C80094D424 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
-		CE35FE782D00745F00880131 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		CE35FE782D00745F00880131 /* UserApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserApiService.swift; sourceTree = "<group>"; };
 		CE35FE7D2D00860700880131 /* CharactersController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersController.swift; sourceTree = "<group>"; };
 		CE4A683B2CFB42D70065A773 /* RickAndMortyIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickAndMortyIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE4A68532CFB43BB0065A773 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +68,11 @@
 		CE4A687F2CFBC0EC0065A773 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		CE8A21A02D2401B80042BF24 /* rick_drinking.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = rick_drinking.json; sourceTree = "<group>"; };
 		CE97DDD02CFF9394004FA2B2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CECFC8F52D3E95D100704FC5 /* EpisodeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeCell.swift; sourceTree = "<group>"; };
+		CECFC8F72D3E961300704FC5 /* EpisodeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EpisodeCell.xib; sourceTree = "<group>"; };
+		CECFC8F92D3E9D3000704FC5 /* Episodes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Episodes.storyboard; sourceTree = "<group>"; };
+		CECFC9042D3FA8BA00704FC5 /* EpisodesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesController.swift; sourceTree = "<group>"; };
+		CECFC9072D3FA92D00704FC5 /* EpisodeInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeInfoController.swift; sourceTree = "<group>"; };
 		D2397E2C709F48E6269273AD /* Pods-RickAndMortyIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RickAndMortyIOS.debug.xcconfig"; path = "Target Support Files/Pods-RickAndMortyIOS/Pods-RickAndMortyIOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,6 +116,7 @@
 		CE30EE3D2D0B21D00094D424 /* cells */ = {
 			isa = PBXGroup;
 			children = (
+				CECFC8F42D3E95B900704FC5 /* EpisodeCell */,
 				CE30EE3E2D0B21DB0094D424 /* CharacterCell */,
 			);
 			path = cells;
@@ -139,7 +150,7 @@
 		CE35FE772D00745900880131 /* api */ = {
 			isa = PBXGroup;
 			children = (
-				CE35FE782D00745F00880131 /* Api.swift */,
+				CE35FE782D00745F00880131 /* UserApiService.swift */,
 			);
 			path = api;
 			sourceTree = "<group>";
@@ -164,6 +175,9 @@
 		CE35FE7C2D0083F100880131 /* episodes */ = {
 			isa = PBXGroup;
 			children = (
+				CECFC9062D3FA90E00704FC5 /* episodeInfo */,
+				CECFC9042D3FA8BA00704FC5 /* EpisodesController.swift */,
+				CECFC8F92D3E9D3000704FC5 /* Episodes.storyboard */,
 			);
 			path = episodes;
 			sourceTree = "<group>";
@@ -313,6 +327,23 @@
 			path = views;
 			sourceTree = "<group>";
 		};
+		CECFC8F42D3E95B900704FC5 /* EpisodeCell */ = {
+			isa = PBXGroup;
+			children = (
+				CECFC8F52D3E95D100704FC5 /* EpisodeCell.swift */,
+				CECFC8F72D3E961300704FC5 /* EpisodeCell.xib */,
+			);
+			path = EpisodeCell;
+			sourceTree = "<group>";
+		};
+		CECFC9062D3FA90E00704FC5 /* episodeInfo */ = {
+			isa = PBXGroup;
+			children = (
+				CECFC9072D3FA92D00704FC5 /* EpisodeInfoController.swift */,
+			);
+			path = episodeInfo;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -380,6 +411,8 @@
 				CE19DA7C2D22CDBD00C8044D /* Characters.storyboard in Resources */,
 				CE4A68792CFBB56E0065A773 /* Colors.xcassets in Resources */,
 				CE4A68602CFB43BB0065A773 /* Main.storyboard in Resources */,
+				CECFC8F82D3E961300704FC5 /* EpisodeCell.xib in Resources */,
+				CECFC8FA2D3E9D3000704FC5 /* Episodes.storyboard in Resources */,
 				CE8A21A12D2401B80042BF24 /* rick_drinking.json in Resources */,
 				CE4A686C2CFB890C0065A773 /* Splash.storyboard in Resources */,
 			);
@@ -439,15 +472,18 @@
 				CE97DDD12CFF939A004FA2B2 /* SceneDelegate.swift in Sources */,
 				CE30EE402D0B21ED0094D424 /* CharacterCell.swift in Sources */,
 				CE30EE452D0B24580094D424 /* ListsMap.swift in Sources */,
+				CECFC8F62D3E95D300704FC5 /* EpisodeCell.swift in Sources */,
 				CE4A68752CFBB3E40065A773 /* ErrorViewController.swift in Sources */,
+				CECFC9082D3FA93400704FC5 /* EpisodeInfoController.swift in Sources */,
 				CE4A687D2CFBBCC10065A773 /* BaseController.swift in Sources */,
 				CE19DA7A2D22CC4F00C8044D /* CharacterInfoController.swift in Sources */,
 				CE4A68612CFB43BB0065A773 /* AppDelegate.swift in Sources */,
 				CE30EE482D0B36CC0094D424 /* Presenter.swift in Sources */,
 				CE4A68632CFB43BB0065A773 /* MainController.swift in Sources */,
 				CE4A68722CFBB3C10065A773 /* Functions.swift in Sources */,
+				CECFC9052D3FA8C400704FC5 /* EpisodesController.swift in Sources */,
 				CE35FE7E2D00860E00880131 /* CharactersController.swift in Sources */,
-				CE35FE792D00746800880131 /* Api.swift in Sources */,
+				CE35FE792D00746800880131 /* UserApiService.swift in Sources */,
 				CE4A68702CFBB3990065A773 /* Variables.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

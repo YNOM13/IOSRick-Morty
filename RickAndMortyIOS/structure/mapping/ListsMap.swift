@@ -9,7 +9,7 @@ import Foundation
 import ObjectMapper
 
 class Character: Mappable{
-    var characterInfo: CharacterInfo? = nil
+    var characterInfo: PageInfo? = nil
     var characterResult: Array<CharacterResult>? = nil
     
     required init?(map: ObjectMapper.Map) {
@@ -22,7 +22,21 @@ class Character: Mappable{
     }
 }
 
-class CharacterInfo: Mappable{
+class Episode: Mappable{
+    var episodeInfo: PageInfo? = nil
+    var episodeResult: Array<EpisodeResult>? = nil
+    
+    required init?(map: ObjectMapper.Map) {
+        
+    }
+    
+    func mapping(map: ObjectMapper.Map) {
+        self.episodeInfo         <- map["info"]
+        self.episodeResult       <- map["results"]
+    }
+}
+
+class PageInfo: Mappable{
     var count: Int? = nil
     var pages: Int? = nil
     var next: String? = nil
@@ -37,6 +51,30 @@ class CharacterInfo: Mappable{
         self.pages      <- map["pages"]
         self.next       <- map["next"]
         self.prev       <- map["prev"]
+    }
+}
+
+class EpisodeResult: Mappable{
+    var id: Int = 0
+    var name: String? = nil
+    var airDate: String? = nil
+    var episode: String? = nil
+    var characters: Array<String>? = nil
+    var url: String? = nil
+    var created: String? = nil
+    
+    required init?(map: ObjectMapper.Map) {
+        
+    }
+    
+    func mapping(map: ObjectMapper.Map) {
+        self.id             <- map["id"]
+        self.name           <- map["name"]
+        self.airDate        <- map["air_date"]
+        self.episode        <- map["episode"]
+        self.characters     <- map["characters"]
+        self.url            <- map["url"]
+        self.created        <- map["created"]
     }
 }
 

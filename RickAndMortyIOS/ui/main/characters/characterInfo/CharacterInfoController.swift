@@ -23,7 +23,5 @@ class CharacterInfoController: BaseController{
         characterImage.kf.setImage(with: URL(string: characterInfo?.imageURL ?? ""))
         characterImage.transitionId = String(characterInfo?.id ?? 0)
         nameLabel.transitionId = String(characterInfo?.id ?? 0) + "name"
-        
-        backButton.transitionId = "hello"
     }
 }

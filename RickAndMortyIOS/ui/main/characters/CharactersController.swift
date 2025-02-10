@@ -15,7 +15,7 @@ class CharactersController: BaseController, CharacterApiView{
     
     private var characters: [CharacterResult] = []
     private var page: Int = 1
-    private var item: CharacterInfo? = nil
+    private var item: PageInfo? = nil
     private var isLoading: Bool = false
     private var presenter: CharacterApiPresenterProtocol?
     let bottomRefreshController = UIRefreshControl()
@@ -40,7 +40,7 @@ class CharactersController: BaseController, CharacterApiView{
         presenter?.loadCharacters(page: page)
     }
     
-    func displayUsers(_ users: [CharacterResult], _ item: CharacterInfo) {
+    func displayUsers(_ users: [CharacterResult], _ item: PageInfo) {
         self.characters = users
         self.item = item
         isLoading = false
