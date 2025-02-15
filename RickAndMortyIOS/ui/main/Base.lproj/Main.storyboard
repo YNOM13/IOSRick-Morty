@@ -130,10 +130,10 @@
             </objects>
             <point key="canvasLocation" x="-2987.0229007633588" y="641.54929577464793"/>
         </scene>
-        <!--View Controller-->
+        <!--Episodes Controller-->
         <scene sceneID="lZm-fF-hPE">
             <objects>
-                <viewController id="yci-HP-TLI" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="episode" id="yci-HP-TLI" customClass="EpisodesController" customModule="RickAndMortyIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aEx-SW-ExA">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -210,6 +210,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ycP-f8-XVJ"/>
+                    <connections>
+                        <outlet property="collectionView" destination="8ZH-ty-3LW" id="lru-9r-tcn"/>
+                        <outlet property="loadingIndicatorView" destination="bLi-KC-UwI" id="g08-OQ-SIc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HLi-d3-fUe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -229,8 +233,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="p96-Yg-DN1" kind="relationship" relationship="viewControllers" id="SYR-vf-6ui"/>
-                        <segue destination="ieh-Cg-xBH" kind="relationship" relationship="viewControllers" id="MgB-BK-Cgk"/>
                         <segue destination="Wb6-sg-v1R" kind="relationship" relationship="viewControllers" id="8kc-t8-QQD"/>
+                        <segue destination="ieh-Cg-xBH" kind="relationship" relationship="viewControllers" id="MgB-BK-Cgk"/>
                         <segue destination="OWS-fL-qcW" kind="relationship" relationship="viewControllers" id="OzE-HP-J18"/>
                     </connections>
                 </tabBarController>

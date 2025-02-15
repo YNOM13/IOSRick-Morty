@@ -8,7 +8,7 @@
 import UIKit
 import ShiftTransitions
 
-class CharactersController: BaseController, CharacterApiView{
+class CharactersController: BaseUserController{
     @IBOutlet weak var charactersCollectionView: UICollectionView!
     @IBOutlet weak var loadingIndicatorView: UIView!
     @IBOutlet weak var headerView: UIView!
@@ -31,8 +31,12 @@ class CharactersController: BaseController, CharacterApiView{
     }
     
     func loadCharacters(page: Int) {
-        guard !isLoading else { return }
+        guard !isLoading else {
+//            loadingIndicatorView.isHidden = false
+            return
+        }
         isLoading = true
+//        loadingIndicatorView.isHidden = isLoading
         presenter?.loadCharacters(page: page)
     }
     
@@ -40,8 +44,8 @@ class CharactersController: BaseController, CharacterApiView{
         presenter?.loadCharacters(page: page)
     }
     
-    func displayUsers(_ users: [CharacterResult], _ item: PageInfo) {
-        self.characters = users
+    override func displayCharacters(_ characters: [CharacterResult], _ item: PageInfo) {
+        self.characters = characters
         self.item = item
         isLoading = false
         charactersCollectionView.reloadData()

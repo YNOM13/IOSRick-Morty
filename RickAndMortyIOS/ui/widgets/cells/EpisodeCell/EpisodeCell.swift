@@ -10,7 +10,7 @@ import UIKit
 class EpisodeCell: UICollectionViewCell{
     @IBOutlet weak var nameLabel: UILabel!
     
-    func setDaya(item: EpisodeResult){
+    func setData(item: EpisodeResult){
         nameLabel.text = item.name
     }
 }

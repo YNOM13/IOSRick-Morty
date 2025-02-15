@@ -11,16 +11,21 @@ protocol CharacterApiPresenterProtocol: AnyObject {
     func loadCharacters(page: Int)
 }
 
-protocol CharacterApiView: AnyObject {
-    func displayUsers(_ users: [CharacterResult], _ item: PageInfo)
+protocol EpisodeApiPresenterProtocol: AnyObject {
+    func loadEpisodes(page: Int)
+}
+
+protocol ApiView: AnyObject {
+    func displayCharacters(_ characters: [CharacterResult], _ item: PageInfo)
     func showError(_ message: String)
+    func displayEpisodes(_ episodes: [EpisodeResult], _ item: PageInfo)
 }
 
 class CharacterPresenter: CharacterApiPresenterProtocol {
-    weak var view: CharacterApiView?
-    private var users: [CharacterResult] = []
+    weak var view: ApiView?
+    private var characters: [CharacterResult] = []
 
-    init(view: CharacterApiView) {
+    init(view: ApiView) {
         self.view = view
     }
 
@@ -30,10 +35,10 @@ class CharacterPresenter: CharacterApiPresenterProtocol {
             
             switch result {
             case .success(let character):
-                self.users.append(contentsOf: character.characterResult ?? [])
+                self.characters.append(contentsOf: character.characterResult ?? [])
                 
                 if let info = character.characterInfo {
-                    self.view?.displayUsers(self.users, info)
+                    self.view?.displayCharacters(self.characters, info)
                 }
             case .failure(let error):
                 self.view?.showError(error.message)
@@ -42,20 +47,11 @@ class CharacterPresenter: CharacterApiPresenterProtocol {
     }
 }
 
-protocol EpisodeApiPresenterProtocol: AnyObject {
-    func loadEpisodes(page: Int)
-}
-
-protocol EpisodeApiView: AnyObject {
-    func displayEpisodes(_ episodes: [EpisodeResult], _ item: PageInfo)
-    func showError(_ message: String)
-}
-
 class EpisodePresenter: EpisodeApiPresenterProtocol {
-    weak var view: EpisodeApiView?
+    weak var view: ApiView?
     private var episodes: [EpisodeResult] = []
 
-    init(view: EpisodeApiView) {
+    init(view: ApiView) {
         self.view = view
     }
 

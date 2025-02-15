@@ -10,6 +10,12 @@ import ObjectMapper
 import UIKit
 import Foundation
 
+struct NetworkError: Error {
+    let type: String
+    let message: String
+    let title: String
+}
+
 class APIService {
     static func fetchCharacters(page: Int, completion: @escaping (Result<Character, NetworkError>) -> Void) {
         let url = "https://rickandmortyapi.com/api/character/?page=\(page)"
@@ -28,7 +34,6 @@ class APIService {
         }
     }
     
-    // Функція для завантаження епізодів
     static func fetchEpisodes(page: Int, completion: @escaping (Result<Episode, NetworkError>) -> Void) {
         let url = "https://rickandmortyapi.com/api/episode/?page=\(page)"
         
@@ -46,10 +51,4 @@ class APIService {
         }
     }
     
-}
-
-struct NetworkError: Error {
-    let type: String
-    let message: String
-    let title: String
 }

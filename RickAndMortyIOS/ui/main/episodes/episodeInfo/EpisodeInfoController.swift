@@ -8,6 +8,8 @@
 import UIKit
 
 class EpisodeInfoController: BaseController{
+    var episode: EpisodeResult? = nil
+    
     override func viewDidLoad(){
         super.viewDidLoad()
     }

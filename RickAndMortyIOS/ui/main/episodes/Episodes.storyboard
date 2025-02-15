@@ -8,20 +8,45 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="5Nw-5x-b4l">
+        <!--Episode Info Controller-->
+        <scene sceneID="Uxk-yB-9lq">
             <objects>
-                <viewController id="b7L-xP-IVx" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="pVd-u6-qSe">
+                <viewController storyboardIdentifier="episodeInfo" id="Lzl-I0-xkM" customClass="EpisodeInfoController" customModule="RickAndMortyIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2gZ-U1-uA0">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="pUk-w8-LDx"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tSE-c2-O0U">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GV9-4q-FAo">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="759"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="GV9-4q-FAo" secondAttribute="trailing" id="6hV-Is-7tO"/>
+                                    <constraint firstItem="GV9-4q-FAo" firstAttribute="height" secondItem="tSE-c2-O0U" secondAttribute="height" priority="250" id="8gV-G6-1g4"/>
+                                    <constraint firstItem="GV9-4q-FAo" firstAttribute="width" secondItem="tSE-c2-O0U" secondAttribute="width" id="8sS-jb-hUn"/>
+                                    <constraint firstItem="GV9-4q-FAo" firstAttribute="leading" secondItem="tSE-c2-O0U" secondAttribute="leading" id="CpM-6N-IH5"/>
+                                    <constraint firstAttribute="bottom" secondItem="GV9-4q-FAo" secondAttribute="bottom" id="dZB-hj-ogl"/>
+                                    <constraint firstItem="GV9-4q-FAo" firstAttribute="top" secondItem="tSE-c2-O0U" secondAttribute="top" id="xGB-Hi-fgY"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="I6z-5Z-O4y"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tSE-c2-O0U" firstAttribute="leading" secondItem="I6z-5Z-O4y" secondAttribute="leading" id="6LG-6p-5cA"/>
+                            <constraint firstItem="tSE-c2-O0U" firstAttribute="top" secondItem="I6z-5Z-O4y" secondAttribute="top" id="9SX-aI-zeT"/>
+                            <constraint firstItem="I6z-5Z-O4y" firstAttribute="trailing" secondItem="tSE-c2-O0U" secondAttribute="trailing" id="Z4p-Sr-fcm"/>
+                            <constraint firstItem="I6z-5Z-O4y" firstAttribute="bottom" secondItem="tSE-c2-O0U" secondAttribute="bottom" id="uh9-du-i38"/>
+                        </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yQa-TB-ovb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7ph-n2-jvq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="431" y="-307"/>
+            <point key="canvasLocation" x="118" y="-28"/>
         </scene>
     </scenes>
     <resources>

@@ -14,6 +14,7 @@
 		CE30EE422D0B220F0094D424 /* CharacterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE30EE412D0B220F0094D424 /* CharacterCell.xib */; };
 		CE30EE452D0B24580094D424 /* ListsMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE30EE442D0B24500094D424 /* ListsMap.swift */; };
 		CE30EE482D0B36CC0094D424 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE30EE472D0B36C80094D424 /* Presenter.swift */; };
+		CE35140F2D612242002F8035 /* BaseUserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE35140E2D61223E002F8035 /* BaseUserController.swift */; };
 		CE35FE792D00746800880131 /* UserApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE35FE782D00745F00880131 /* UserApiService.swift */; };
 		CE35FE7E2D00860E00880131 /* CharactersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE35FE7D2D00860700880131 /* CharactersController.swift */; };
 		CE4A685D2CFB43BB0065A773 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE4A68542CFB43BB0065A773 /* Assets.xcassets */; };
@@ -48,6 +49,7 @@
 		CE30EE412D0B220F0094D424 /* CharacterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterCell.xib; sourceTree = "<group>"; };
 		CE30EE442D0B24500094D424 /* ListsMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsMap.swift; sourceTree = "<group>"; };
 		CE30EE472D0B36C80094D424 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		CE35140E2D61223E002F8035 /* BaseUserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUserController.swift; sourceTree = "<group>"; };
 		CE35FE782D00745F00880131 /* UserApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserApiService.swift; sourceTree = "<group>"; };
 		CE35FE7D2D00860700880131 /* CharactersController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersController.swift; sourceTree = "<group>"; };
 		CE4A683B2CFB42D70065A773 /* RickAndMortyIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickAndMortyIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -147,12 +149,12 @@
 			path = presenter;
 			sourceTree = "<group>";
 		};
-		CE35FE772D00745900880131 /* api */ = {
+		CE35FE772D00745900880131 /* ApiService */ = {
 			isa = PBXGroup;
 			children = (
 				CE35FE782D00745F00880131 /* UserApiService.swift */,
 			);
-			path = api;
+			path = ApiService;
 			sourceTree = "<group>";
 		};
 		CE35FE7A2D0083E400880131 /* characters */ = {
@@ -252,7 +254,7 @@
 				CE8A219F2D2401A00042BF24 /* animations */,
 				CE30EE462D0B36BF0094D424 /* presenter */,
 				CE30EE432D0B24440094D424 /* mapping */,
-				CE35FE772D00745900880131 /* api */,
+				CE35FE772D00745900880131 /* ApiService */,
 				CE4A687E2CFBC0DF0065A773 /* extensions */,
 				CE4A687B2CFBBC9F0065A773 /* BaseController */,
 				CE4A686E2CFBB3880065A773 /* variables */,
@@ -299,6 +301,7 @@
 		CE4A687B2CFBBC9F0065A773 /* BaseController */ = {
 			isa = PBXGroup;
 			children = (
+				CE35140E2D61223E002F8035 /* BaseUserController.swift */,
 				CE4A687C2CFBBCBD0065A773 /* BaseController.swift */,
 			);
 			path = BaseController;
@@ -475,6 +478,7 @@
 				CECFC8F62D3E95D300704FC5 /* EpisodeCell.swift in Sources */,
 				CE4A68752CFBB3E40065A773 /* ErrorViewController.swift in Sources */,
 				CECFC9082D3FA93400704FC5 /* EpisodeInfoController.swift in Sources */,
+				CE35140F2D612242002F8035 /* BaseUserController.swift in Sources */,
 				CE4A687D2CFBBCC10065A773 /* BaseController.swift in Sources */,
 				CE19DA7A2D22CC4F00C8044D /* CharacterInfoController.swift in Sources */,
 				CE4A68612CFB43BB0065A773 /* AppDelegate.swift in Sources */,
