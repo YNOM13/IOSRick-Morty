@@ -36,6 +36,44 @@ class Episode: Mappable{
     }
 }
 
+class UserLocation: Mappable{
+    var locationInfo: PageInfo? = nil
+    var locationResult: Array<LocationResult>? = nil
+    
+    required init?(map: ObjectMapper.Map) {
+        
+    }
+    
+    func mapping(map: ObjectMapper.Map) {
+        self.locationInfo         <- map["info"]
+        self.locationResult       <- map["results"]
+    }
+}
+
+class LocationResult: Mappable{
+    var id: Int = 0
+    var name: String? = nil
+    var type: String? = nil
+    var dimension: String? = nil
+    var residents: Array<String>? = nil
+    var url: String? = nil
+    var createdAt: String? = nil
+    
+    required init?(map: ObjectMapper.Map) {
+        
+    }
+    
+    func mapping(map: ObjectMapper.Map) {
+        self.id             <- map["id"]
+        self.name           <- map["name"]
+        self.type           <- map["type"]
+        self.dimension      <- map["dimension"]
+        self.residents      <- map["residents"]
+        self.url            <- map["url"]
+        self.createdAt      <- map["created"]
+    }
+}
+
 class PageInfo: Mappable{
     var count: Int? = nil
     var pages: Int? = nil

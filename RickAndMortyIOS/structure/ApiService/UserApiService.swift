@@ -51,4 +51,20 @@ class APIService {
         }
     }
     
+    static func fetchLocations(page: Int, completion: @escaping (Result<UserLocation, NetworkError>) -> Void) {
+        let url = "https://rickandmortyapi.com/api/location/?page=\(page)"
+        
+        AF.request(url).validate().responseData { response in
+            switch response.result {
+            case .success(let data):
+                if let location = try? Mapper<UserLocation>().map(JSONString: String(data: data, encoding: .utf8)!) {
+                    completion(.success(location))
+                } else {
+                    completion(.failure(NetworkError(type: "ParsingError", message: "Failed to parse location data", title: "Error")))
+                }
+            case .failure:
+                completion(.failure(NetworkError(type: "NetworkError", message: "Request failed", title: "Error")))
+            }
+        }
+    }
 }

@@ -26,9 +26,9 @@
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="2Ca-J2-nR0">
                         <rect key="frame" x="8" y="168" width="127" height="24"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqd-nx-NEr">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="bqd-nx-NEr">
                                 <rect key="frame" x="0.0" y="0.0" width="127" height="24"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <color key="textColor" name="012121"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>

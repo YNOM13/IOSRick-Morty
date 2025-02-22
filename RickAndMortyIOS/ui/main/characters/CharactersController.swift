@@ -83,7 +83,7 @@ extension CharactersController: UICollectionViewDataSource, UICollectionViewDele
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: (collectionView.frame.width - 16) / 2, height: collectionView.frame.width / 2)
+        return CGSize(width: (collectionView.frame.width - 16) / 2, height: (collectionView.frame.width / 2) + 20)
     }
 }
 

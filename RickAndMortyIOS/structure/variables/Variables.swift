@@ -6,3 +6,9 @@
 //
 
 var app_version = "1.0.0"
+
+enum StatusCharacterType: String {
+    case alive = "Alive"
+    case dead = "Dead"
+    case unknown = "Unknown"
+}

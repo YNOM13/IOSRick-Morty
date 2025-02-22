@@ -10,6 +10,11 @@
 		A2E07302B2592D1DEA2709B3 /* Pods_RickAndMortyIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DDF7184AC6E0856809108AB /* Pods_RickAndMortyIOS.framework */; };
 		CE19DA7A2D22CC4F00C8044D /* CharacterInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19DA792D22CC4700C8044D /* CharacterInfoController.swift */; };
 		CE19DA7C2D22CDBD00C8044D /* Characters.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE19DA7B2D22CDBD00C8044D /* Characters.storyboard */; };
+		CE2141DA2D6A5214003FA6F1 /* LocationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2141D92D6A520D003FA6F1 /* LocationsController.swift */; };
+		CE2141DC2D6A5242003FA6F1 /* Locations.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE2141DB2D6A5242003FA6F1 /* Locations.storyboard */; };
+		CE2141DF2D6A573C003FA6F1 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2141DE2D6A5739003FA6F1 /* LocationCell.swift */; };
+		CE2141E12D6A576D003FA6F1 /* LocationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE2141E02D6A576D003FA6F1 /* LocationCell.xib */; };
+		CE2141E42D6A57D6003FA6F1 /* LocationInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2141E32D6A57D3003FA6F1 /* LocationInfoController.swift */; };
 		CE30EE402D0B21ED0094D424 /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE30EE3F2D0B21EB0094D424 /* CharacterCell.swift */; };
 		CE30EE422D0B220F0094D424 /* CharacterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE30EE412D0B220F0094D424 /* CharacterCell.xib */; };
 		CE30EE452D0B24580094D424 /* ListsMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE30EE442D0B24500094D424 /* ListsMap.swift */; };
@@ -45,6 +50,11 @@
 		6DDF7184AC6E0856809108AB /* Pods_RickAndMortyIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RickAndMortyIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE19DA792D22CC4700C8044D /* CharacterInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterInfoController.swift; sourceTree = "<group>"; };
 		CE19DA7B2D22CDBD00C8044D /* Characters.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Characters.storyboard; sourceTree = "<group>"; };
+		CE2141D92D6A520D003FA6F1 /* LocationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsController.swift; sourceTree = "<group>"; };
+		CE2141DB2D6A5242003FA6F1 /* Locations.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Locations.storyboard; sourceTree = "<group>"; };
+		CE2141DE2D6A5739003FA6F1 /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
+		CE2141E02D6A576D003FA6F1 /* LocationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationCell.xib; sourceTree = "<group>"; };
+		CE2141E32D6A57D3003FA6F1 /* LocationInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInfoController.swift; sourceTree = "<group>"; };
 		CE30EE3F2D0B21EB0094D424 /* CharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCell.swift; sourceTree = "<group>"; };
 		CE30EE412D0B220F0094D424 /* CharacterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterCell.xib; sourceTree = "<group>"; };
 		CE30EE442D0B24500094D424 /* ListsMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsMap.swift; sourceTree = "<group>"; };
@@ -115,9 +125,27 @@
 			path = characterInfo;
 			sourceTree = "<group>";
 		};
+		CE2141DD2D6A5731003FA6F1 /* LocationCell */ = {
+			isa = PBXGroup;
+			children = (
+				CE2141DE2D6A5739003FA6F1 /* LocationCell.swift */,
+				CE2141E02D6A576D003FA6F1 /* LocationCell.xib */,
+			);
+			path = LocationCell;
+			sourceTree = "<group>";
+		};
+		CE2141E22D6A57CB003FA6F1 /* locationInfo */ = {
+			isa = PBXGroup;
+			children = (
+				CE2141E32D6A57D3003FA6F1 /* LocationInfoController.swift */,
+			);
+			path = locationInfo;
+			sourceTree = "<group>";
+		};
 		CE30EE3D2D0B21D00094D424 /* cells */ = {
 			isa = PBXGroup;
 			children = (
+				CE2141DD2D6A5731003FA6F1 /* LocationCell */,
 				CECFC8F42D3E95B900704FC5 /* EpisodeCell */,
 				CE30EE3E2D0B21DB0094D424 /* CharacterCell */,
 			);
@@ -170,6 +198,9 @@
 		CE35FE7B2D0083EA00880131 /* locations */ = {
 			isa = PBXGroup;
 			children = (
+				CE2141E22D6A57CB003FA6F1 /* locationInfo */,
+				CE2141D92D6A520D003FA6F1 /* LocationsController.swift */,
+				CE2141DB2D6A5242003FA6F1 /* Locations.storyboard */,
 			);
 			path = locations;
 			sourceTree = "<group>";
@@ -407,6 +438,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE2141E12D6A576D003FA6F1 /* LocationCell.xib in Resources */,
 				CE30EE422D0B220F0094D424 /* CharacterCell.xib in Resources */,
 				CE4A68772CFBB4980065A773 /* ErrorView.storyboard in Resources */,
 				CE4A685D2CFB43BB0065A773 /* Assets.xcassets in Resources */,
@@ -418,6 +450,7 @@
 				CECFC8FA2D3E9D3000704FC5 /* Episodes.storyboard in Resources */,
 				CE8A21A12D2401B80042BF24 /* rick_drinking.json in Resources */,
 				CE4A686C2CFB890C0065A773 /* Splash.storyboard in Resources */,
+				CE2141DC2D6A5242003FA6F1 /* Locations.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,7 +507,10 @@
 				CE4A686A2CFB87A60065A773 /* SplashController.swift in Sources */,
 				CE97DDD12CFF939A004FA2B2 /* SceneDelegate.swift in Sources */,
 				CE30EE402D0B21ED0094D424 /* CharacterCell.swift in Sources */,
+				CE2141DA2D6A5214003FA6F1 /* LocationsController.swift in Sources */,
 				CE30EE452D0B24580094D424 /* ListsMap.swift in Sources */,
+				CE2141E42D6A57D6003FA6F1 /* LocationInfoController.swift in Sources */,
+				CE2141DF2D6A573C003FA6F1 /* LocationCell.swift in Sources */,
 				CECFC8F62D3E95D300704FC5 /* EpisodeCell.swift in Sources */,
 				CE4A68752CFBB3E40065A773 /* ErrorViewController.swift in Sources */,
 				CECFC9082D3FA93400704FC5 /* EpisodeInfoController.swift in Sources */,

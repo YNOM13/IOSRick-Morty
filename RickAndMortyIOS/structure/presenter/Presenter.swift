@@ -15,10 +15,15 @@ protocol EpisodeApiPresenterProtocol: AnyObject {
     func loadEpisodes(page: Int)
 }
 
+protocol LocationApiPresenterProtocol: AnyObject {
+    func loadLocations(page: Int)
+}
+
 protocol ApiView: AnyObject {
     func displayCharacters(_ characters: [CharacterResult], _ item: PageInfo)
     func showError(_ message: String)
     func displayEpisodes(_ episodes: [EpisodeResult], _ item: PageInfo)
+    func displayLocation(_ locations: [LocationResult], _ item: PageInfo)
 }
 
 class CharacterPresenter: CharacterApiPresenterProtocol {
@@ -65,6 +70,33 @@ class EpisodePresenter: EpisodeApiPresenterProtocol {
                 
                 if let info = episode.episodeInfo {
                     self.view?.displayEpisodes(self.episodes, info)
+                }
+            case .failure(let error):
+                self.view?.showError(error.message)
+            }
+        }
+    }
+}
+
+
+class LocationPresenter: LocationApiPresenterProtocol {
+    weak var view: ApiView?
+    private var locations: [LocationResult] = []
+
+    init(view: ApiView) {
+        self.view = view
+    }
+
+    func loadLocations(page: Int) {
+        APIService.fetchLocations(page: page) { [weak self] result in
+            guard let self = self else { return }
+            
+            switch result {
+            case .success(let character):
+                self.locations.append(contentsOf: character.locationResult ?? [])
+                
+                if let info = character.locationInfo {
+                    self.view?.displayLocation(self.locations, info)
                 }
             case .failure(let error):
                 self.view?.showError(error.message)

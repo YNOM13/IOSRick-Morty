@@ -1,15 +1,6 @@
 {
   "images" : [
     {
-      "idiom" : "universal"
-    },
-    {
-      "appearances" : [
-        {
-          "appearance" : "luminosity",
-          "value" : "light"
-        }
-      ],
       "filename" : "tab_icon_locations_active.pdf",
       "idiom" : "universal"
     },
@@ -21,7 +12,8 @@
         }
       ],
       "filename" : "tab_icon_locations_active_dark_theme.pdf",
-      "idiom" : "universal"
+      "idiom" : "universal",
+      "unassigned" : true
     }
   ],
   "info" : {

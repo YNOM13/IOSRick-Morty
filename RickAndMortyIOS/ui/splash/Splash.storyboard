@@ -27,7 +27,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rick and Morty" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YkL-gP-gdY">
                                 <rect key="frame" x="18" y="526" width="357" height="33.666666666666629"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" name="012121"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -51,6 +51,9 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="012121">
+            <color red="0.0040000001899898052" green="0.1289999932050705" blue="0.1289999932050705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="CFE1FA">
             <color red="0.81199997663497925" green="0.88200002908706665" blue="0.98000001907348633" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -12,7 +12,7 @@ class MainController: UITabBarController, UITabBarControllerDelegate {
         super.viewDidLoad()
         
         self.delegate = self
-        self.tabBar.backgroundColor = UIColor(named: "CFE1FA")
+        self.tabBar.backgroundColor = UIColor.F_1_F_4_FC
     }
 }
 
