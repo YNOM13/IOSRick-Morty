@@ -15,6 +15,10 @@ class CharacterInfoController: BaseController{
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var isAliveIndicatorView: UIView!
     @IBOutlet weak var isAlivePersonLabel: UILabel!
+    @IBOutlet weak var scpeciesLabel: UILabel!
+    @IBOutlet weak var typeLabel: UILabel!
+    @IBOutlet weak var originLabel: UILabel!
+    @IBOutlet weak var urlOriginUrl: UILabel!
     
     var characterInfo: CharacterResult? = nil
     
@@ -36,5 +40,10 @@ class CharacterInfoController: BaseController{
         }else{
             isAliveIndicatorView.backgroundColor = UIColor._012121
         }
+        scpeciesLabel?.text =  "Species \(characterInfo?.species ?? "None")"
+        
+        typeLabel?.text = characterInfo?.type != "" ? "Type \(characterInfo?.type ?? "None")" : "Type is undefined"
+        originLabel?.text = "origin name \(characterInfo?.origin?.name ?? "")"
+        urlOriginUrl?.text = "  url \(characterInfo?.origin?.url ?? "")"
     }
 }

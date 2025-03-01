@@ -152,7 +152,7 @@ class CharacterResult: Mappable{
 
 class Origin: Mappable{
     var name: String? = nil
-    var locationURL: String? = nil
+    var url: String? = nil
     
     required init?(map: ObjectMapper.Map) {
         
@@ -160,7 +160,7 @@ class Origin: Mappable{
     
     func mapping(map: ObjectMapper.Map) {
         self.name           <- map["name"]
-        self.locationURL    <- map["url"]
+        self.url            <- map["url"]
     }
 }
 
